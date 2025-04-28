@@ -29,9 +29,9 @@ jobs:
       - name: List files in dist directory
         run: |
           ls dist/
-
+      
       - name: Upload the .exe file as an artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: windows-executable
-          path: dist/hallo.exe  # Ensure this path is correct
+          path: dist/*.exe
